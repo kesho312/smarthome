@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Cairo', sans-serif;
+    --mainColor: #555;
+    --secColor: #eeaa1a;
+    --borderRadius: 15px;
+    --background: rgba(255,255, 255, 0.5) ;
+}
+
+.ourGrid {
+    background: url(./cover1.jpg)   no-repeat  ;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 3% 50% auto auto 4%;
+    grid-template-areas: "logo logo logo . nav nav nav nav" " . mcontent mcontent mcontent mcontent photo photo photo" "seccontent seccontent seccontent seccontent seccontent seccontent seccontent seccontent " "proj proj proj proj proj proj proj proj" "footer footer footer footer footer footer footer footer" ;
+    
+    
+}
+.logo{
+    background-color: var(--background) ;
+    border-radius: var(--borderRadius);
+    grid-area: logo ;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+    
+    }
+.logo h2{
+    font-size: 2.5vmin;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--mainColor);
+    letter-spacing: 6px;
+    cursor: pointer;
+
+}
+.ourGrid nav {
+    display: flex;
+    background-color: var(--background)  ;
+    border-radius: var(--borderRadius);
+    grid-area: nav;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    
+}
+nav a  {
+    font-size: 2vmin;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--mainColor);
+    transition: 0.5s ease-out;
+
+}
+nav a:hover{
+    transform: scale(1.05);
+}
+.main {
+    grid-area: mcontent ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.main h2 {
+    font-weight: 900;
+    font-size: 5vmin;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: var(--mainColor);
+}
+.main h3 {
+    font-weight: 700;
+    font-size: 3vmin;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+    color: var(--mainColor);
+}
+.btnmain{
+    width: 100%;
+    display: flex;
+    
+}
+.learn-btn{
+    
+    background-color:var(--secColor) ;
+    border-radius: var(--borderRadius);
+    color: var(--mainColor);
+    text-decoration: none;
+    padding: 5px 5%;
+    font-size: 1.5vmin;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-right: 5%;
+    margin-top:5%;
+    transition: 0.5s ease; 
+}
+.learn-btn:hover{
+    transform: scale(1.05);
+}
+.socialicons {
+    display: flex;
+    margin-left: 10%;
+}
+.socialicons a{
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 2.3vmin;
+    color: var(--mainColor);
+    cursor: pointer;
+}
+
+.photo{
+    grid-area: photo;
+}
+.seccontent {
+    grid-area: seccontent;
+}
+.continer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255, 255, 0.7);
+    align-items: center;
+    width:auto;
+    border-radius: var(--borderRadius);
+    padding-bottom: 50px;
+    
+    }
+.continer h1 {
+    color: var(--secColor);
+    font-size: 3vmin;
+    text-transform: capitalize;
+}
+.secmain {
+    display: flex;
+    padding: 5px;
+    margin-left:1px ;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items:center ;
+    border-radius: 5px;
+    
+    
+}
+.secmain div {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    justify-content: center;
+    align-items: center ;
+    background-color: var(--baseColor);
+    width: calc(75%/3);
+    padding: 20px;
+    border: 1px solid var(--mainColor);
+    transition: 0.5s ease;
+    position: relative;
+    }
+/* .secmain div:after{
+    content: "";
+    position: absolute;
+    padding: 1px;
+    bottom: -2px;
+    height: 10px;
+    width: 100%;
+    background-image:linear-gradient(to right,#eb3b5a 20%, #fc5c65 20%,#fc5c65 40%, #fd9644 40% , #fd9644 60% ,#fed330 60% ,#fed330 80%,#fffa65 80% );
+    
+    border: 0.5px solid white;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+} */
+.secmain div:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.secmain p {
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1vmin;
+    height: 200px;
+    overflow: hidden;
+    
+}
+.secmain a{
+    font-size: 8vmin;
+    color: var(--mainColor);
+}
+.secmain h2 {
+    font-size: 2.6vmin;
+    color: var(--secColor);
+    text-transform: uppercase;
+}
+.project{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-area: proj;
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--borderRadius);
+    padding: 3%;
+    
+}
+.project h1{
+    color: var(--secColor);
+    font-size: 3vmin;
+    text-transform: capitalize;
+}
+.cards {
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    
+    
+    
+}
+.project-image img{
+    width: 100%;
+    
+    
+}
+.one-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 14em;
+    width: 23em;
+    background-color: white;
+    border-radius: 15px;
+    border : 1px solid white;
+    transition: 0.5s ease;
+    margin: 20px;
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 3px 6px, rgba(255, 255, 255, 0.23) 0px 3px 6px;
+     /* box-shadow: 2px 4px 8px 3px Gainsboro; */ 
+}
+
+.cards  :hover {
+    transform: scale(1.05);
+}
+.card-discraption{
+    display: flex;
+    width: 100%;
+    
+    /* background-color: #eeaa1a; */
+    justify-content: center;
+}
+.one-card h3{
+    font-weight: 500;
+    
+    
+}
+
+
+footer {
+    padding: 1px;
+    background-color: var(--background)  ;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
